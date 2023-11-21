@@ -1,10 +1,10 @@
 # BookHubX_Clone
 
-## Project Overview-->
+## Project Overview:-
 
 BookHubX aims to revolutionize the way readers discover, purchase, and engage with books. The project focuses on creating a dynamic community where users can participate in discussions, write reviews, and build reading lists. The key entities include Books, Users (Readers, Authors, Admins), Community Discussions, Book Reviews, Reading Lists, and a GPT-powered Chatbot for intelligent book recommendations.
 
-# Key Features:-
+## Key Features:-
 
     Bookstore:
         Browse books by genre, author, and criteria.
@@ -30,10 +30,18 @@ BookHubX aims to revolutionize the way readers discover, purchase, and engage wi
         Intelligent book and author recommendations.
         Personalized user interactions.
 
-# Technology Stack:-
+## Technology Stack:-
 
     Frontend: Angular
     Backend: Node.js
     Database: MongoDB
     Authentication: JWT-based authentication
     Chatbot Service: GPT-based using OpenAI's GPT
+
+## Project Structure:-
+
+The project is structured into frontend and backend components, ensuring modularity and maintainability. Follow the folder structure guidelines in each component for seamless development.
+
+## Authentication:-
+
+BookHubX uses JWT-based authentication with role-based access control. Ensure proper token handling for secure user interactions.
