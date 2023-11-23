@@ -3,6 +3,8 @@ const app=express();
 const connection=require("./config/db");
 const {authenticate}=require("./middlewares/authenticate.middleware");
 const {userRouter}=require("./routes/user.route")
+const {bookRouter}=require("./routes/book.route")
+const {disrouter}=require("./routes/discussion.route")
 require("dotenv").config()
 const cors=require("cors")
 
@@ -14,6 +16,8 @@ app.get("/", (req,res)=>{
 })
 
 app.use("/",userRouter)
+app.use("/",bookRouter)
+app.use("/",disrouter)
 app.use(authenticate)
 
 
