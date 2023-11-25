@@ -1,10 +1,12 @@
 const express=require("express")
 const {JsonWebToken} = require("jsonwebtoken")
 const UserModel=require("../models/user")
+const {blacklist}=require("../models/blacklist")
 const userRouter=express.Router()
 const jwt=require("jsonwebtoken")
 const bcrypt=require("bcrypt")
 
+//user register-->
 userRouter.post("/register",async(req,res)=>{
     const {username,password,role}=req.body
     try{
@@ -23,6 +25,8 @@ userRouter.post("/register",async(req,res)=>{
     
 })
 
+
+//user login-->
 userRouter.post("/login", async(req,res)=>{
     const {username,password}=(req.body)
     try{
@@ -45,6 +49,14 @@ userRouter.post("/login", async(req,res)=>{
          res.send({"msg":"Something went wrong","error":err.message})
      }
 })
+
+
+//user logout-->
+userRouter.get("/logout",(req,res)=>{
+    blacklist.push(req.headers?.authorization?.split(" ")[1])
+
+    res.send({msg:"logout successful"})
+    })
 
 module.exports={
     userRouter
