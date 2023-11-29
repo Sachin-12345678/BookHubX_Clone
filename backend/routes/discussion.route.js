@@ -1,3 +1,4 @@
+//discussion.route.js-->
 const express = require('express');
 const Discussion = require("../models/discussion");
 const {authenticate}=require("../middlewares/authenticate.middleware");

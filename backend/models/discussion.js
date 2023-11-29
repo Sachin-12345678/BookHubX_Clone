@@ -1,3 +1,4 @@
+//discussion.js-->
 const mongoose = require('mongoose');
 
 const discussionSchema = new mongoose.Schema({
